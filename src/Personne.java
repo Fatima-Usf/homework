@@ -1,25 +1,35 @@
 import java.util.ArrayList;
 
 /**
- * Created by Fatima YOUCEF and Mahdi ZAROUR on 29/10/16.
+ * Created by fatima YOUCEF and Mahdi ZAROUR on 29/10/16.
  */
 public class Personne {
 
     private String nom;
     private String nationalite;
     private int nbAmis = 0;
-    private ArrayList<Personne> Amis = new ArrayList<>();
+    private ArrayList<Personne>Amis = new ArrayList<>();
 
+    public Personne(String nom, String nationalite,ArrayList<Personne>Amis)
+    {
+        this.nom = nom;
+
+        this.nationalite = nationalite;
+
+        this.Amis = Amis;
+    }
+
+    public Personne (String nom, String nationalite) {
+        this.nom=nom;
+        this.nationalite = nationalite;
+    }
     public Personne(Personne autre) {
         this.nom = autre.nom;
         this.nationalite = autre.nationalite;
 
     }
 
-    public Personne(String nom, String nationalite) {
-        this.nom=nom;
-        this.nationalite = nationalite;
-    }
+
 
     public String getNom() {
         return this.nom;
@@ -34,6 +44,7 @@ public class Personne {
     }
 
     public void setNbAmis() {
+
         this.nbAmis = nbAmis;
     }
 
@@ -43,7 +54,7 @@ public class Personne {
 
     public void ajouterAmi(Personne p) {
         Amis.add(p);
-        nbAmis++;
+ nbAmis++;
     }
     public void MaListeAmis(){
         for (int i = 0; i < Amis.size(); i++) {
@@ -54,22 +65,21 @@ public class Personne {
 
     public void AmisAlgeriens(){
         for (int i = 0; i <Amis.size(); i++) {
-            if(Amis.get(i).getNationalite().equals("algerie")){
-                System.out.println(" liste d'amis algériens" + Amis.get(i).getNom());
+            if (this.nationalite.equals(Amis.get(i).getNationalite()))
+            System.out.println(" * " + Amis.get(i).getNom());
+        }
+    }
+
+    public void AmisEtrange(){
+        for (int i = 0; i < this.Amis.size(); i++) {
+            if (!this.nationalite.equals(Amis.get(i).getNationalite())){
+                System.out.println("* " + Amis.get(i).getNom());
             }
 
         }
     }
 
-    public void AmisEtrange(){
-        for (int i = 0; i <Amis.size(); i++) {
-            if(!Amis.get(i).getNationalite().equals("algerie")){
-                System.out.println(" * " + Amis.get(i).getNom());
-            }
-
-       }
-    }
-
 
  }
+
 
