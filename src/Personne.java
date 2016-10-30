@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**
- * Created by fatima YOUCEF and Mahdi ZAROUR on 29/10/16.
+ * Created by Fatima YOUCEF and Mahdi ZAROUR on 29/10/16.
  */
 public class Personne {
 
