@@ -64,10 +64,10 @@ public class Personne {
     public void AmisEtrange(){
         for (int i = 0; i <Amis.size(); i++) {
             if(!Amis.get(i).getNationalite().equals("algerie")){
-                System.out.println(" liste d'amis etrange " + Amis.get(i).getNom());
+                System.out.println(" * " + Amis.get(i).getNom());
             }
 
-        }
+       }
     }
 
 
