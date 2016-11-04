@@ -22,7 +22,7 @@ public class Main {
         System.out.println(" La liste des Amis algériens de " + p1.getNom() + " est : ");
         p1.AmisAlgeriens();
 
-        System.out.println("                                          ");
+        System.out.println("                                          "); // Pourquoi cet espace 
         System.out.println(" La liste des Amis etrangére de " + p1.getNom() + " est : ");
         p1.AmisEtrange();
     }
